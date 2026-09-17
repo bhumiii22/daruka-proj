@@ -1,0 +1,13 @@
+{
+  "frontend/src/**/*.{js,jsx}": [
+    "cd frontend && npx eslint --fix",
+    "npx prettier --write"
+  ],
+  "frontend/src/**/*.{css,json,html}": [
+    "npx prettier --write"
+  ],
+  "backend/**/*.py": [
+    "black --line-length 88",
+    "flake8 --config backend/.flake8"
+  ]
+}

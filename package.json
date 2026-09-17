@@ -1,0 +1,21 @@
+{
+  "name": "darukaa-earth-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Darukaa.Earth Geospatial Data Analytics Platform",
+  "scripts": {
+    "prepare": "husky",
+    "lint:frontend": "cd frontend && npm run lint",
+    "format:frontend": "cd frontend && npm run format",
+    "lint:backend": "flake8 backend && black --check backend",
+    "format:backend": "black backend",
+    "test:backend": "cd backend && pytest",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && uvicorn app.main:app --reload --port 8000"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
+  }
+}
